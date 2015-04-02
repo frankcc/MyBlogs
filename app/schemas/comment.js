@@ -12,5 +12,4 @@ var CommentSchema = new Schema({
  	}
  }
 })
-
 module.exports = CommentSchema
