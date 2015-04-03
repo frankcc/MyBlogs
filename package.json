@@ -1,0 +1,38 @@
+{
+  "name": "MyBlogs",
+  "version": "1.0.0",
+  "description": "MyBlogs\r 学习node做一个自己的blog",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "acorn": "^1.0.1",
+    "acorn-globals": "^1.0.3",
+    "bson": "^0.3.1",
+    "connect-mongo": "^0.8.0",
+    "crypto": "^0.0.3",
+    "express": "^4.12.3",
+    "jade": "^1.9.2",
+    "mongoose": "^4.0.1",
+    "path": "^0.11.14",
+    "python": "^0.0.4",
+    "serve-favicon": "^2.2.0",
+    "supervisor": "^0.6.0",
+    "underscore": "^1.8.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frankcc/MyBlogs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frankcc/MyBlogs/issues"
+  },
+  "homepage": "https://github.com/frankcc/MyBlogs"
+}
