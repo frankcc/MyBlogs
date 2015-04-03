@@ -1,11 +1,7 @@
 var express=require('express')
 var app=express()
 var mongoose = require('mongoose')
-return
-
-var session    = require(express-session)
-
-
+var session  = require(express-session)
 var mongoStore = require('connect-mongo')(session)
 var fs = require('fs')
 var path = require('path')
@@ -14,6 +10,7 @@ var dbUrl = 'mongodb://localhost/frankcc'
 
 app.set('views', './app/views/pages')
 app.set('view engine', 'jade')
+
 app.use(express.bodyParser())
 app.use(express.cookieParser())
 app.use(express.multipart())
