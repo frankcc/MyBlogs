@@ -1,9 +1,9 @@
 var express=require('express')
 var app=express()
 var mongoose = require('mongoose')
-return
 
-var session    = require(express-session)
+
+var session    = require('express-session')
 
 
 var mongoStore = require('connect-mongo')(session)
@@ -19,9 +19,9 @@ app.use(express.cookieParser())
 app.use(express.multipart())
 
 //mongoose connect
-mongoose.connect(dbUrl)
+//mongoose.connect(dbUrl)
 // models loading
-var models_path = __dirname + '/app/models'
+//var models_path = __dirname + '/app/models'
 var walk = function(path) {
   fs
     .readdirSync(path)
@@ -39,7 +39,7 @@ var walk = function(path) {
       }
     })
 }
-walk(models_path)
+//walk(models_path)
 
 
 app.use(express.session({
