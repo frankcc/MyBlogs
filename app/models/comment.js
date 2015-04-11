@@ -1,5 +1,13 @@
 var mongoose = require('mongoose')
-var CommentSchema = require('../schemas/comment')
-var Comment = mongoose.model('Comment', CommentSchema)
+var ObjectId = mongoose.Schema.Types.ObjectId
+var CommentSchema = new mongoose.Schema({
+	content: String,
+	meta: {
+		addTime: {
+			type: Date,
+			default: Date.now()
+		}
+	}
+})
 
-module.exports = Comment
+mongoose.model('Comment', CommentSchema)
