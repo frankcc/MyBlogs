@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #F5FAFC;
+	overflow-x: hidden;
+}
+.logoBox {
+	text-align: center;
+	margin-top: 100px;
+}
+.logo {
+}
+.intro {
+	margin-top: 40px;
+	font-size: 33px;
+	font-weight: 400;
+	color: #313131;
+}
+.roundForm {
+	width: 324px;
+	margin: 40px auto 0 auto;
+	border: 1px #e6e6e6;
+}
+.roundForm .inputer {
+	line-height: 24px;
+	height: 40px;
+	border: 1px solid #e6e6e6;
+	width: 302px;
+	outline: 0;
+	padding: 0 10px;
+	margin-bottom: -1px;
+}
+.roundForm .inputer:focus {
+	box-shadow: inset 0 0 8px #eaeaea;
+	background: #fdfdfd;
+}
+.roundForm .username {
+	border-radius: 4px 4px 0 0;
+
+}
+.roundForm .last {
+	border-radius: 0 0 4px 4px;
+}
+
+#loginBtn {
+	background: #5DA5C6;
+	border: none;
+	color: #FFF;
+	display: block;
+	width: 100%;
+	line-height: 40px;
+	font-size: 16px;
+	border-radius: 4px;
+	margin-top: 20px;
+	font-family: "微软雅黑";
+}
+#userRegBox {
+	width: 100%;
+	height: 100%;
+	background: #F5FAFC;
+	/*position: absolute;
+	top: 0;*/
+	left: 100%;
+}
+#regBtn {
+	background: #FFF;
+	border: 1px solid #e3e3e3;
+	color: #A9A9A9;
+	display: block;
+	text-align: center;
+	width: 100%;
+	line-height: 40px;
+	font-size: 16px;
+	border-radius: 4px;
+	margin-top: 40px;
+	font-family: "微软雅黑";
+}
+.h2title {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 50px;
+}
+.closeBox {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	font-size: 40px;
+	font-weight: 400;
+}

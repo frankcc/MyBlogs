@@ -1,0 +1,18 @@
+doctype
+html
+	head
+		link(href="/style/admin/main.css", rel="stylesheet")
+		link(href="/style/admin/user-new.css", rel="stylesheet")
+		include ../../includes/adminhead
+	body
+		div
+			form(method="post").roundForm
+				div.row
+					input(type='text',placeholder="请输入你的账号").inputer.username
+				div.row
+					input(type='password',placeholder="请输入对应的密码").inputer.last
+				div.row
+					img(onclick="",src="")#vailcode
+					input(type='text',placeholder="请输入你的验证码",style="width: 227px").inputer.last
+				div.row
+					button(type='submit')#loginBtn 立即登录

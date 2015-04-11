@@ -1,0 +1,73 @@
+extends ../../adminlayout
+
+block content
+	div.container-fluid
+		div.row
+			div.col-sm-12.col-md-12.main
+				h1.page-header 管理控制台
+				p
+					div.btn-group
+						span 文章分类：
+					div.btn-group
+						select.form-control
+							option 1
+							option 2
+							option 3
+							option 4
+					div.btn-group
+						&nbsp;&nbsp;
+					div.btn-group
+						button(type="button").btn.btn-primary 添加新文章
+				div.row
+					div.col-md-12
+						div.panel.panel-primary
+							div.panel-heading 
+								h3.panel-title 文章列表
+							div.panel-body
+								table.table.table-striped
+									thead
+										tr
+											th xxxx
+											th xxxx
+											th xxxx
+											th xxxx
+									tbody
+										tr
+											td 234234
+											td 234234
+											td 234234
+											td 234234
+										tr
+											td 234234
+											td 234234
+											td 234234
+											td 234234
+										tr
+											td 234234
+											td 234234
+											td 234234
+											td 234234
+										tr
+											td 234234
+											td 234234
+											td 234234
+											td 234234
+						ul.pagination
+							li
+								a(href='#',aria-label="Previous")
+									span(aria-hidden="true") &laquo;
+							li
+								a(href='#') 1
+							li
+								a(href='#') 2
+							li
+								a(href='#') 3
+							li
+								a(href='#') 4
+							li
+								a(href='#') 5
+							li
+								a(href='#',aria-label="Next")
+									span(aria-hidden="true") &raquo;
+
+
