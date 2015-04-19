@@ -8,11 +8,8 @@ html
 		div
 			form(method="post").roundForm
 				div.row
-					input(type='text',placeholder="请输入你的账号").inputer.username
+					input(type='text',placeholder="请输入你的账号",name='num').inputer.username
 				div.row
-					input(type='password',placeholder="请输入对应的密码").inputer.last
+					input(type='password',placeholder="请输入对应的密码",name='password').inputer.last
 				div.row
-					img(onclick="",src="")#vailcode
-					input(type='text',placeholder="请输入你的验证码",style="width: 227px").inputer.last
-				div.row
-					button(type='submit')#loginBtn 立即登录
+					button(type='submit',style='width:302px')#loginBtn 立即登录

@@ -1,23 +1,25 @@
 extends ../../adminlayout
 
 block content
-	div.container-fluid
+	script(src='../libs/angular/angular.js')						
+	script(src='../script/admin/index.js')
+	div(ng-app='indexapp').container-fluid
 		div.row
-			div.col-sm-12.col-md-12.main
+			div(ng-controller='articleList').col-sm-12.col-md-12.main
 				h1.page-header 管理控制台
 				p
 					div.btn-group
 						span 文章分类：
 					div.btn-group
-						select.form-control
-							option 1
-							option 2
-							option 3
-							option 4
+						select.form-control.cate
+							each item in categories
+								option(value='#{item._id}') #{item.name}
+					div.btn-group
+						button(href="#",ng-click='load()').btn.btn-primary 获取
 					div.btn-group
 						&nbsp;&nbsp;
 					div.btn-group
-						button(type="button").btn.btn-primary 添加新文章
+						a(href="../admin/article").btn.btn-primary 添加新文章
 				div.row
 					div.col-md-12
 						div.panel.panel-primary
@@ -27,31 +29,15 @@ block content
 								table.table.table-striped
 									thead
 										tr
-											th xxxx
-											th xxxx
-											th xxxx
-											th xxxx
-									tbody
+											th 文章名
+											th 发布时间
+											th 操作
+									tbody(ng-repeat="item in lists")
 										tr
-											td 234234
-											td 234234
-											td 234234
-											td 234234
-										tr
-											td 234234
-											td 234234
-											td 234234
-											td 234234
-										tr
-											td 234234
-											td 234234
-											td 234234
-											td 234234
-										tr
-											td 234234
-											td 234234
-											td 234234
-											td 234234
+											td(ng-bind='item.title')
+											td(ng-bind='item.meta.createAt')
+											td:a(target="_blank", href="{{item._id}}") 查看
+										
 						ul.pagination
 							li
 								a(href='#',aria-label="Previous")
@@ -69,5 +55,5 @@ block content
 							li
 								a(href='#',aria-label="Next")
 									span(aria-hidden="true") &raquo;
-
+	
 

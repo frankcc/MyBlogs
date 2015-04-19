@@ -1,7 +1,5 @@
 var mongoose = require('mongoose')
-
 var ObjectId = mongoose.Schema.Types.ObjectId	
-
 
 var ArticleSchema = new mongoose.Schema({
   title: String,
@@ -17,30 +15,14 @@ var ArticleSchema = new mongoose.Schema({
     createAt: {
       type: Date,
       default: Date.now()
-    },
-    updateAt: {
-      type: Date,
-      default: Date.now()
-    },
-    updateUser: {
-      type: ObjectId,
-      ref: 'User'
-    },
-     AddUser: {
-      type: ObjectId,
-      ref: 'User'
     }
   }
 })
 
 ArticleSchema.pre('save', function(next) {
   if (this.isNew) {
-    this.meta.createAt = this.meta.updateAt = Date.now()
+    this.meta.createAt =  Date.now()
   }
-  else {
-    this.meta.updateAt = Date.now()
-  }
-
   next()
 })
 
@@ -48,7 +30,7 @@ ArticleSchema.statics = {
   fetch: function(cb) {
     return this
       .find({})
-      .sort('meta.updateAt')
+      .sort('meta.createAt')
       .exec(cb)
   },
   findById: function(id, cb) {

@@ -3,29 +3,21 @@ extends ../../adminlayout
 block content
 	div.container
 		div.row
-			form
+			form(method="post", enctype="multipart/form-data")
 				div.form-group
-					label Email address
-					input(type="email",placeholder="Enter email").form-control
+					label 标题
+					input(type="text",placeholder="标题",name="article[title]").form-control
 				div.form-group
-					label Email address
-					input(type="email",placeholder="Enter email").form-control
+					label 种类
+					select(name="article[category]").form-control.cate
+							each item in categories
+								option(value='#{item._id}') #{item.name}
 				div.form-group
-					label Email address
-					input(type="email",placeholder="Enter email").form-control
-				div.form-group
-					label Email address
-					input(type="email",placeholder="Enter email").form-control
-				div.form-group
-					label Email address
-					input(type="email",placeholder="Enter email").form-control
+					label 焦点图
+					input(type="file",name='foucsImg')
 				div.form-group
 					label 主要内容
-					input(type="file")
-					p.help-block Example block-level help text here.
-				div.form-group
-					label 主要内容
-					textarea.form-control
-				button(type='submit').btn.btn-default Submit
+					textarea(name='article[content]').form-control
+				button(type='submit').btn.btn-default 保存
 				
 

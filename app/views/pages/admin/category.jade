@@ -1,0 +1,47 @@
+extends ../../adminlayout
+
+block content
+	div.container-fluid
+		div.row
+			div.col-sm-12.col-md-12.main
+				div.row
+					div.col-md-12
+						div.panel.panel-primary
+							div.panel-heading 
+								h3.panel-title 文章列表
+							div.panel-body
+								table.table.table-striped
+									thead
+										tr
+											th 分类名
+											th 描叙
+											th 排序
+											th 操作
+									tbody
+										each item in categories
+											tr
+												td #{item.name}
+												td #{item.summary}
+												td #{item.sort}
+												td: a(href='../admin/category/#{item._id}') 删除
+										
+		div.row
+				form(style='padding:20px',method="post")
+					div.form-group
+						label 分类名
+						input(type="test",placeholder="分类名",name='category[name]').form-control
+					div.form-group
+						label 分类描述
+						input(type="test",placeholder="分类描述",name='category[summary]').form-control
+					div.form-group
+						label 排序
+						select(name='category[sort]').form-control
+							option 1
+							option 2
+							option 3
+							option 4
+							option 5
+					
+					button(type='submit').btn.btn-default 保存	
+
+
